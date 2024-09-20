@@ -11,7 +11,7 @@ cp -r s3prl/upstream/* S3PRL_PATH/s3prl/upstream/
 3. Run this repository in s3prl environment 
 
 ## Example commands on LibriSpeech dev-clean
-Calculate activating probability as mentioned in Section 3.2 of the paper
+1. Calculate activating probability as mentioned in Section 3.2 of the paper
 ```
 python3 match_phone_s3prl.py -m [MODEL_NAME] -s [SAVE_PATH] -d [LIBRI_ROOT]/dev-clean/ -c [CONDITION]
 ```
@@ -23,4 +23,12 @@ LIBRI_ROOT: Root path of LibriSpeech.
 
 CONDITION: Condition of activating probabiltiy. Choose from phone-type, gender, and pitch.
 
+2. Identifying property neurons as mentioned in Section 3.2 and Section 4.1
+```
+python3 identify_property_neurons.py -p [PROB_PATH] -s [SAVE_PATH] -c [CONDITION]
+```
+PROB_PATH: Path to activating probability
 
+SAVE_PATH: Path to save property neurons
+
+CONDITION: Condition of activating probabiltiy. Choose from phone-type, gender, and pitch.
